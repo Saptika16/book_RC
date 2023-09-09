@@ -11,7 +11,7 @@ import streamlit as st
 import pandas as pd
 
 import pickle 
-user_id=pickle.load(open('user_id','rb'))
+user_id=pickle.load(open('user_id_deploy','rb'))
 #user_id=pd.read_pickle('user_id_deploy')
 #user_id=data['User-ID'].unique()
 #user_id.sort()
