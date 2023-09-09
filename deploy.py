@@ -90,7 +90,7 @@ def recomm_book_kids(user):
 
 
     for i in range(len(books_read)):
-            df_rate_book_by_user=df_rate_book_by_user.append(pd.DataFrame(rate_book_by_user[i],
+            df_rate_book_by_user=df_rate_book_by_user._append(pd.DataFrame(rate_book_by_user[i],
                                       columns=['Book','Rate']),ignore_index=True)
     df_rate_book_by_user=df_rate_book_by_user.sort_values(by='Rate',ascending=False)  
     #print("2 highest rated Books by user out of the books read by the user and the rating given  to each of it")
@@ -146,7 +146,7 @@ def recomm_book_young_adult(user):
 
 
     for i in range(len(books_read)):
-            df_rate_book_by_user=df_rate_book_by_user.append(pd.DataFrame(rate_book_by_user[i],
+            df_rate_book_by_user=df_rate_book_by_user._append(pd.DataFrame(rate_book_by_user[i],
                                       columns=['Book','Rate']),ignore_index=True)
     df_rate_book_by_user=df_rate_book_by_user.sort_values(by='Rate',ascending=False)  
    # print("2 highest rated Books by user out of the books read by the user and the rating given  to each of it")
@@ -201,7 +201,7 @@ def recomm_book_adult(user):
 
 
     for i in range(len(books_read)):
-            df_rate_book_by_user=df_rate_book_by_user.append(pd.DataFrame(rate_book_by_user[i],
+            df_rate_book_by_user=df_rate_book_by_user._append(pd.DataFrame(rate_book_by_user[i],
                                       columns=['Book','Rate']),ignore_index=True)
     df_rate_book_by_user=df_rate_book_by_user.sort_values(by='Rate',ascending=False)  
     #print("2 highest rated Books by user out of the books read by the user and the rating given  to each of it")
@@ -258,7 +258,7 @@ def recomm_book_elderly(user):
 
 
     for i in range(len(books_read)):
-            df_rate_book_by_user=df_rate_book_by_user.append(pd.DataFrame(rate_book_by_user[i],
+            df_rate_book_by_user=df_rate_book_by_user._append(pd.DataFrame(rate_book_by_user[i],
                                       columns=['Book','Rate']),ignore_index=True)
     df_rate_book_by_user=df_rate_book_by_user.sort_values(by='Rate',ascending=False)  
     #print("2 highest rated Books by user out of the books read by the user and the rating given  to each of it")
