@@ -11,8 +11,8 @@ import streamlit as st
 import pandas as pd
 
 import pickle 
-user_id=pickle.load(open('user_id_deploy','rb'))
-#user_id=pd.read_pickle('user_id_deploy')
+#user_id=pickle.load(open('user_id_deploy','rb'))
+user_id=pd.read_pickle('user_id_deploy')
 #user_id=data['User-ID'].unique()
 #user_id.sort()
 
@@ -34,6 +34,10 @@ knn_young_adults=pickle.load(open('knn_young_adults_deploy.sav','rb'))
 knn_adults=pickle.load(open('knn_adults_deploy.sav','rb'))
 knn_elderly=pickle.load(open('knn_elderly_deploy.sav','rb'))
 
+#pt_user_kids=pd.read_pickle('pt_user_kids_deploy')
+#pt_young_adults=pd.read_pickle('pt_young_adults_deploy')
+#pt_adults=pd.read_pickle('pt_adults_deploy')
+#pt_elderly=pd.read_pickle('pt_elderly_deploy')
 
 pt_user_kids=pickle.load(open('pt_user_kids_deploy','rb'))
 pt_young_adults=pickle.load(open('pt_young_adults_deploy','rb'))
