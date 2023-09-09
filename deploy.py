@@ -16,28 +16,28 @@ user_id=pd.read_pickle('user_id')
 #user_id=data['User-ID'].unique()
 #user_id.sort()
 
-kids=pickle.load(open('kids.csv','rb'))
-young_adults=pickle.load(open('young_adults.csv','rb'))
-adults=pickle.load(open('adults.csv','rb'))
-elderly=pickle.load(open('elderly.csv','rb'))
+kids=pickle.load(open('kids_depoly.csv','rb'))
+young_adults=pickle.load(open('young_adults_depoly.csv','rb'))
+adults=pickle.load(open('adults.csv_depoly','rb'))
+elderly=pickle.load(open('elderly_depoly.csv','rb'))
 
-indices_kids=pickle.load(open('indices_kids','rb'))
+indices_kids=pickle.load(open('indices_kids_depoly','rb'))
 
-indices_young_adults=pickle.load(open('indices_young_adults','rb'))
+indices_young_adults=pickle.load(open('indices_young_adults_depoly','rb'))
 
-indices_adults=pickle.load(open('indices_adults','rb'))
+indices_adults=pickle.load(open('indices_adults_depoly','rb'))
 
-indices_elderly=pickle.load(open('indices_elderly','rb'))
+indices_elderly=pickle.load(open('indices_elderly_depoly','rb'))
 
-knn=pickle.load(open('knn.sav','rb'))
-knn_young_adults=pickle.load(open('knn_young_adults.sav','rb'))
-knn_adults=pickle.load(open('knn_adults.sav','rb'))
-knn_elderly=pickle.load(open('knn_elderly.sav','rb'))
+knn=pickle.load(open('knn_kids_depoly.sav','rb'))
+knn_young_adults=pickle.load(open('knn_young_adults_depoly.sav','rb'))
+knn_adults=pickle.load(open('knn_adults_depoly.sav','rb'))
+knn_elderly=pickle.load(open('knn_elderly_depoly.sav','rb'))
 
-pt_user_kids=pickle.load(open('pt_user_kids','rb'))
-pt_young_adults=pickle.load(open('pt_young_adults','rb'))
-pt_adults=pickle.load(open('pt_adults','rb'))
-pt_elderly=pickle.load(open('pt_elderly','rb'))
+pt_user_kids=pickle.load(open('pt_user_kids_depoly','rb'))
+pt_young_adults=pickle.load(open('pt_young_adults_depoly','rb'))
+pt_adults=pickle.load(open('pt_adults_depoly','rb'))
+pt_elderly=pickle.load(open('pt_elderly_depoly','rb'))
 #pt_user_kids=kids.pivot_table(pt_user_kids)
 
 #pt_user_kids.fillna(0,inplace=True)
@@ -302,7 +302,7 @@ def main():
         st.write("Recommendation of Books to the user ",selected_user   )
         
         age= user_id[user_id['User-ID']==selected_user]['Age'].values[0] 
-        if age<21:
+        if age<26:
                 
             #if data['User-ID']==selected_user and data['Age']<21:
                 
@@ -331,7 +331,7 @@ def main():
                     
        
         
-        if (age>20) & (age<41):
+        if (age>25) & (age<37):
                  
              #if data['User-ID']==selected_user and data['Age']<21:
                  
@@ -359,7 +359,7 @@ def main():
                      st.image(young_adults[young_adults['Book-Title']==recommendation[5]]['Image-URL-M'].values[0])
                     
         
-        if (age>40) & (age<=60):
+        if (age>36) & (age<=50):
                  
              #if data['User-ID']==selected_user and data['Age']<21:
                  
@@ -386,7 +386,7 @@ def main():
                      st.write(recommendation[5])
                      st.image(adults[adults['Book-Title']==recommendation[5]]['Image-URL-M'].values[0])
                      
-        if age>=61:
+        if age>=51:
                   
               #if data['User-ID']==selected_user and data['Age']<21:
                   
